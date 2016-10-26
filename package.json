@@ -1,6 +1,6 @@
 {
   "name": "AlyBot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Aly's Discord Bot!",
   "readme": "README.md",
   "maintainers": [],
@@ -13,6 +13,7 @@
   "dependencies": {
     "d20": "^1.4.1",
     "discord.js": "9.3.x",
+    "discord.js-music": "^1.0.3",
     "feedparser": "^1.1.5",
     "google": "1.1.x",
     "google-images": "0.1.x",
@@ -31,5 +32,5 @@
     "wikijs": "^0.1.4",
     "youtube-node": "^1.2.0"
   },
-  "main": "discord_bot.js"
+  "main": "alybot.js"
 }

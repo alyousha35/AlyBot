@@ -236,7 +236,7 @@ var commands = {
             });
         }
     },
-    "meme": {
+    /*"meme": {
         usage: 'meme "top text" "bottom text"',
 				description: function() {
             var str = "Currently available memes:\n"
@@ -256,7 +256,7 @@ var commands = {
                 msg.channel.sendMessage(image);
             });
         }
-    },
+    },*/
     "version": {
         description: "returns the git commit this bot is running",
         process: function(bot,msg,suffix) {
@@ -713,8 +713,9 @@ bot.on("ready", function () {
     loadFeeds();
 	console.log("Logged in! Serving in " + bot.guilds.array().length + " servers");
 	require("./plugins.js").init();
-	console.log("type "+Config.commandPrefix+"helpmealy in Discord for a commands list.");
+	console.log("Type "+Config.commandPrefix+"helpmealy in Discord for a commands list.");
 	bot.user.setStatus("online",Config.commandPrefix+"helpmealy");
+    console.log("AlyBot Ready!");
 });
 
 bot.on("disconnected", function () {
@@ -727,7 +728,7 @@ bot.on("disconnected", function () {
 function checkMessageForCommand(msg, isEdit) {
 	//check if message is a command
 	if(msg.author.id != bot.user.id && (msg.content[0] === Config.commandPrefix)){
-        console.log("treating " + msg.content + " from " + msg.author + " as command");
+        console.log("Treating " + msg.content + " from " + msg.author + " as command");
 		var cmdTxt = msg.content.split(" ")[0].substring(1);
         var suffix = msg.content.substring(cmdTxt.length+2);//add one for the ! and one for the space
         if(msg.isMentioned(bot.user)){
