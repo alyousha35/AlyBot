@@ -199,6 +199,10 @@ var commands = {
         description: "bot says message with text to speech",
         process: function(bot,msg,suffix){ msg.channel.sendMessage(suffix,{tts:true});}
     },
+		"potet": {
+        description: "ask the bot about potet",
+        process: function(bot,msg,suffix){ msg.channel.sendMessage("fuck potet",{tts:true});}
+    },
     "pullanddeploy": {
         description: "bot will perform a git pull master and restart with the new code",
         process: function(bot,msg,suffix) {
